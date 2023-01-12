@@ -56,7 +56,6 @@
 				FE703817CE9E7AB01B1E33A9 /* Pods-Trending.debug.xcconfig */,
 				6CE2EAD817A4336E5D8AA35E /* Pods-Trending.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,47 @@
 		C36017632970893F00E9D2BD /* Trending */ = {
 			isa = PBXGroup;
 			children = (
-				C36017642970893F00E9D2BD /* AppDelegate.swift */,
-				C36017662970893F00E9D2BD /* SceneDelegate.swift */,
-				C36017682970893F00E9D2BD /* ViewController.swift */,
-				C360176A2970893F00E9D2BD /* Main.storyboard */,
-				C360176D2970894000E9D2BD /* Assets.xcassets */,
-				C360176F2970894000E9D2BD /* LaunchScreen.storyboard */,
-				C36017722970894000E9D2BD /* Info.plist */,
+				C36017782970A11200E9D2BD /* Managers */,
+				C360177A2970A12F00E9D2BD /* ViewControllers */,
+				C360177B2970A14A00E9D2BD /* Storyboards */,
+				C36017792970A11D00E9D2BD /* Resources */,
 			);
 			path = Trending;
+			sourceTree = "<group>";
+		};
+		C36017782970A11200E9D2BD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C36017792970A11D00E9D2BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C36017642970893F00E9D2BD /* AppDelegate.swift */,
+				C36017662970893F00E9D2BD /* SceneDelegate.swift */,
+				C360176D2970894000E9D2BD /* Assets.xcassets */,
+				C36017722970894000E9D2BD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C360177A2970A12F00E9D2BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C36017682970893F00E9D2BD /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C360177B2970A14A00E9D2BD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C360176A2970893F00E9D2BD /* Main.storyboard */,
+				C360176F2970894000E9D2BD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
