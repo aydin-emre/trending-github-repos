@@ -6,3 +6,12 @@
 //
 
 import UIKit
+
+class HomeTableViewCell: UITableViewCell {
+
+
+    func bindItem() {
+        
+    }
+
+}

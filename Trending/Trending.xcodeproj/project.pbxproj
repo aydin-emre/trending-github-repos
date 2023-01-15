@@ -16,6 +16,11 @@
 		C360177D2970A1B900E9D2BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360177C2970A1B900E9D2BD /* HomeViewController.swift */; };
 		C36017812970A5F200E9D2BD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36017802970A5F200E9D2BD /* HomeTableViewCell.swift */; };
 		C36017832970A67500E9D2BD /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36017822970A67500E9D2BD /* HomeTableViewCell.xib */; };
+		C3C2A64E2971EC0C00815F09 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2A64D2971EC0C00815F09 /* UITableView+Extension.swift */; };
+		C3C2A6502971ECAF00815F09 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2A64F2971ECAF00815F09 /* NetworkManager.swift */; };
+		C3C2A6562971ED9900815F09 /* NetworkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2A6552971ED9900815F09 /* NetworkPath.swift */; };
+		C3C2A65E29741F9200815F09 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2A65D29741F9200815F09 /* SearchResponse.swift */; };
+		C3C2A661297421AD00815F09 /* retry-and-user-busy.json in Resources */ = {isa = PBXBuildFile; fileRef = C3C2A660297421AD00815F09 /* retry-and-user-busy.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		C360177C2970A1B900E9D2BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C36017802970A5F200E9D2BD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		C36017822970A67500E9D2BD /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		C3C2A64D2971EC0C00815F09 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		C3C2A64F2971ECAF00815F09 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C3C2A6552971ED9900815F09 /* NetworkPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPath.swift; sourceTree = "<group>"; };
+		C3C2A65D29741F9200815F09 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		C3C2A660297421AD00815F09 /* retry-and-user-busy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "retry-and-user-busy.json"; sourceTree = "<group>"; };
 		FE703817CE9E7AB01B1E33A9 /* Pods-Trending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending.debug.xcconfig"; path = "Target Support Files/Pods-Trending/Pods-Trending.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +94,10 @@
 		C36017632970893F00E9D2BD /* Trending */ = {
 			isa = PBXGroup;
 			children = (
+				C3C2A6542971ED8F00815F09 /* Enums */,
+				C3C2A64C2971EBFD00815F09 /* Extensions */,
 				C36017782970A11200E9D2BD /* Managers */,
+				C3C2A65A29741F7800815F09 /* Models */,
 				C360177E2970A4F800E9D2BD /* Views */,
 				C360177A2970A12F00E9D2BD /* ViewControllers */,
 				C360177B2970A14A00E9D2BD /* Storyboards */,
@@ -96,6 +109,7 @@
 		C36017782970A11200E9D2BD /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C3C2A64F2971ECAF00815F09 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -103,6 +117,7 @@
 		C36017792970A11D00E9D2BD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3C2A65F2974219200815F09 /* Lotties */,
 				C36017642970893F00E9D2BD /* AppDelegate.swift */,
 				C36017662970893F00E9D2BD /* SceneDelegate.swift */,
 				C360176D2970894000E9D2BD /* Assets.xcassets */,
@@ -143,6 +158,38 @@
 				C36017822970A67500E9D2BD /* HomeTableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		C3C2A64C2971EBFD00815F09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C3C2A64D2971EC0C00815F09 /* UITableView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C3C2A6542971ED8F00815F09 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C3C2A6552971ED9900815F09 /* NetworkPath.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		C3C2A65A29741F7800815F09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3C2A65D29741F9200815F09 /* SearchResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3C2A65F2974219200815F09 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				C3C2A660297421AD00815F09 /* retry-and-user-busy.json */,
+			);
+			path = Lotties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C2A661297421AD00815F09 /* retry-and-user-busy.json in Resources */,
 				C36017712970894000E9D2BD /* LaunchScreen.storyboard in Resources */,
 				C360176E2970894000E9D2BD /* Assets.xcassets in Resources */,
 				C36017832970A67500E9D2BD /* HomeTableViewCell.xib in Resources */,
@@ -261,10 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C2A6502971ECAF00815F09 /* NetworkManager.swift in Sources */,
 				C36017652970893F00E9D2BD /* AppDelegate.swift in Sources */,
 				C36017672970893F00E9D2BD /* SceneDelegate.swift in Sources */,
+				C3C2A64E2971EC0C00815F09 /* UITableView+Extension.swift in Sources */,
 				C36017812970A5F200E9D2BD /* HomeTableViewCell.swift in Sources */,
 				C360177D2970A1B900E9D2BD /* HomeViewController.swift in Sources */,
+				C3C2A6562971ED9900815F09 /* NetworkPath.swift in Sources */,
+				C3C2A65E29741F9200815F09 /* SearchResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
