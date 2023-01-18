@@ -17,23 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QpQ-yu-SyN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c3K-29-r7a">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QpQ-yu-SyN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="57E-6G-AGc"/>
-                            <constraint firstItem="QpQ-yu-SyN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QsI-vW-h76"/>
-                            <constraint firstItem="QpQ-yu-SyN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aXk-YN-cnD"/>
-                            <constraint firstAttribute="bottom" secondItem="QpQ-yu-SyN" secondAttribute="bottom" id="nzw-O0-k5h"/>
+                            <constraint firstItem="c3K-29-r7a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4hT-af-rbO"/>
+                            <constraint firstItem="c3K-29-r7a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MAe-jT-1ls"/>
+                            <constraint firstItem="c3K-29-r7a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yn1-ak-G5d"/>
+                            <constraint firstAttribute="bottom" secondItem="c3K-29-r7a" secondAttribute="bottom" id="xQs-pa-0ye"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trending" id="w0E-gl-E4w"/>
                     <connections>
-                        <outlet property="tableView" destination="QpQ-yu-SyN" id="t0E-9E-vnP"/>
+                        <outlet property="tableView" destination="c3K-29-r7a" id="ZY4-2k-7Ht"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

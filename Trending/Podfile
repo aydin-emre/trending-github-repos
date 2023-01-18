@@ -9,5 +9,6 @@ target 'Trending' do
   pod 'Alamofire'
   pod 'SkeletonView'
   pod 'lottie-ios'
+  pod 'Kingfisher', '~> 7.0'
 
 end
