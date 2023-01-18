@@ -7,9 +7,12 @@
 
 import UIKit
 import SkeletonView
+import Lottie
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var noConnectionView: UIView!
+    @IBOutlet weak var lottieAnimationView: LottieAnimationView!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.rowHeight = UITableView.automaticDimension
@@ -26,28 +29,44 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupView()
-        setupVIP()
+        searchRepositories()
+    }
+
+    @IBAction func retryButtonPressed(_ sender: UIButton) {
+        searchRepositories()
     }
 
     private func setupView() {
         tableView.dataSource = self
         tableView.delegate = self
+
+        setupLottie()
     }
 
-    private func setupVIP() {
+    private func searchRepositories() {
+        showSkeleton = true
+        tableView.isHidden = false
+        noConnectionView.isHidden = true
         NetworkManager.shared.searchRepositories { [weak self] result in
+            guard let self = `self` else { return }
             switch result {
             case .success(let response):
-                print(response)
                 if let items = response.items {
-                    self?.showSkeleton = false
-                    self?.list = items
-                    self?.tableView.reloadData()
+                    self.showSkeleton = false
+                    self.list = items
+                    self.tableView.reloadData()
                 }
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                self.tableView.isHidden = true
+                self.noConnectionView.isHidden = false
             }
         }
+    }
+
+    private func setupLottie() {
+        lottieAnimationView.contentMode = .scaleAspectFit
+        lottieAnimationView.loopMode = .loop
+        lottieAnimationView.play()
     }
 
 }

@@ -17,22 +17,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c3K-29-r7a">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vKz-Fa-WRg">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <sections/>
-                            </tableView>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u11-hx-LBl">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="0.0"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vob-aW-P2o" customClass="LottieAnimationView" customModule="Lottie">
+                                                <rect key="frame" x="40" y="40" width="313" height="313"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Vob-aW-P2o" secondAttribute="height" id="X1N-yC-vdB"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="retry-and-user-busy"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Uk3-c2-XaP">
+                                                <rect key="frame" x="20" y="389" width="353" height="49.333333333333314"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY5-80-bNt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An alien is probably blocking your signal." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP7-rd-Vjh">
+                                                        <rect key="frame" x="0.0" y="32.333333333333371" width="353" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJU-9g-wyD">
+                                                <rect key="frame" x="20" y="-104" width="353" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="t4f-Sv-rLv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="RETRY"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="systemGreenColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="retryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jqd-K5-qkW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Uk3-c2-XaP" firstAttribute="leading" secondItem="u11-hx-LBl" secondAttribute="leading" constant="20" id="EtO-T3-gFI"/>
+                                            <constraint firstAttribute="trailing" secondItem="eJU-9g-wyD" secondAttribute="trailing" constant="20" id="HOS-hb-1LT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vob-aW-P2o" secondAttribute="trailing" constant="40" id="QFk-Ae-Jvl"/>
+                                            <constraint firstAttribute="bottom" secondItem="eJU-9g-wyD" secondAttribute="bottom" constant="60" id="YuQ-GG-Fsg"/>
+                                            <constraint firstItem="Vob-aW-P2o" firstAttribute="leading" secondItem="u11-hx-LBl" secondAttribute="leading" constant="40" id="dtd-pJ-yvY"/>
+                                            <constraint firstAttribute="trailing" secondItem="Uk3-c2-XaP" secondAttribute="trailing" constant="20" id="hGi-oB-Mq4"/>
+                                            <constraint firstItem="Vob-aW-P2o" firstAttribute="top" secondItem="u11-hx-LBl" secondAttribute="top" constant="40" id="rfN-pe-elu"/>
+                                            <constraint firstItem="eJU-9g-wyD" firstAttribute="leading" secondItem="u11-hx-LBl" secondAttribute="leading" constant="20" id="usI-rs-ANh"/>
+                                            <constraint firstItem="Uk3-c2-XaP" firstAttribute="top" secondItem="Vob-aW-P2o" secondAttribute="bottom" constant="36" id="v8c-Yc-hbD"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c3K-29-r7a">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                                        <sections/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c3K-29-r7a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4hT-af-rbO"/>
-                            <constraint firstItem="c3K-29-r7a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MAe-jT-1ls"/>
-                            <constraint firstItem="c3K-29-r7a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yn1-ak-G5d"/>
-                            <constraint firstAttribute="bottom" secondItem="c3K-29-r7a" secondAttribute="bottom" id="xQs-pa-0ye"/>
+                            <constraint firstItem="vKz-Fa-WRg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QYq-ex-aMC"/>
+                            <constraint firstItem="vKz-Fa-WRg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Umy-Gm-gPg"/>
+                            <constraint firstItem="vKz-Fa-WRg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W5a-Ma-v6f"/>
+                            <constraint firstAttribute="bottom" secondItem="vKz-Fa-WRg" secondAttribute="bottom" id="Z2G-6D-v08"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trending" id="w0E-gl-E4w"/>
                     <connections>
+                        <outlet property="lottieAnimationView" destination="Vob-aW-P2o" id="YuC-FM-pAb"/>
+                        <outlet property="noConnectionView" destination="u11-hx-LBl" id="TFg-e4-tfZ"/>
                         <outlet property="tableView" destination="c3K-29-r7a" id="ZY4-2k-7Ht"/>
                     </connections>
                 </viewController>
@@ -59,9 +134,15 @@
             <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Vob-aW-P2o"/>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

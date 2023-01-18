@@ -68,6 +68,9 @@
                             <constraint firstAttribute="bottom" secondItem="wRL-gX-OwP" secondAttribute="bottom" id="tqC-id-0F2"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ra1-yk-9dw" secondAttribute="trailing" id="u04-Om-TQF"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KJg-7j-QG1">
                         <rect key="frame" x="100" y="84" width="0.0" height="0.0"/>

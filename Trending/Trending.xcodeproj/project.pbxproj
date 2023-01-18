@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B73DBA25FADB8B4AB838463 /* Pods_Trending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC0E9777493F1C3A78435D1 /* Pods_Trending.framework */; };
+		C33724EC2978863D0083846A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33724EB2978863D0083846A /* UIButton+Extension.swift */; };
 		C36017652970893F00E9D2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36017642970893F00E9D2BD /* AppDelegate.swift */; };
 		C36017672970893F00E9D2BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36017662970893F00E9D2BD /* SceneDelegate.swift */; };
 		C360176C2970893F00E9D2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C360176A2970893F00E9D2BD /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		5CC0E9777493F1C3A78435D1 /* Pods_Trending.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trending.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE2EAD817A4336E5D8AA35E /* Pods-Trending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending.release.xcconfig"; path = "Target Support Files/Pods-Trending/Pods-Trending.release.xcconfig"; sourceTree = "<group>"; };
+		C33724EB2978863D0083846A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		C36017612970893F00E9D2BD /* Trending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36017642970893F00E9D2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36017662970893F00E9D2BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C3C2A64D2971EC0C00815F09 /* UITableView+Extension.swift */,
+				C33724EB2978863D0083846A /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				C36017672970893F00E9D2BD /* SceneDelegate.swift in Sources */,
 				C3C2A64E2971EC0C00815F09 /* UITableView+Extension.swift in Sources */,
 				C36017812970A5F200E9D2BD /* HomeTableViewCell.swift in Sources */,
+				C33724EC2978863D0083846A /* UIButton+Extension.swift in Sources */,
 				C360177D2970A1B900E9D2BD /* HomeViewController.swift in Sources */,
 				C3C2A6562971ED9900815F09 /* NetworkPath.swift in Sources */,
 				C3C2A65E29741F9200815F09 /* SearchResponse.swift in Sources */,
