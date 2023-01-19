@@ -20,8 +20,10 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var projectDetailLabel: UILabel!
     @IBOutlet weak var projectDetailContainerView: UIView!
+    @IBOutlet weak var languageContainerView: UIView!
     @IBOutlet weak var languageIconImageView: UIImageView!
     @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var starContainerView: UIView!
     @IBOutlet weak var starIconImageView: UIImageView!
     @IBOutlet weak var starCountLabel: UILabel!
 
@@ -32,14 +34,22 @@ class HomeTableViewCell: UITableViewCell {
         }
         usernameLabel.text = item.owner?.login
         projectNameLabel.text = item.fullName
+        projectDetailLabel.text = item.descriptionText
+        languageLabel.text = item.language
+        starCountLabel.text = String(item.stargazersCount ?? 0)
+
+        projectDetailLabel.isHidden = item.descriptionText == nil
+        projectDetailContainerView.isHidden = (item.language == nil) && (item.stargazersCount == nil)
+        languageContainerView.isHidden = item.language == nil
+        starContainerView.isHidden = item.stargazersCount == nil
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         languageIconImageView.image = languageIconImageView.image?.withRenderingMode(.alwaysTemplate)
-        languageIconImageView.tintColor = .blue
+        languageIconImageView.tintColor = .systemBlue
         starIconImageView.image = starIconImageView.image?.withRenderingMode(.alwaysTemplate)
-        starIconImageView.tintColor = .yellow
+        starIconImageView.tintColor = .systemYellow
     }
 
 }

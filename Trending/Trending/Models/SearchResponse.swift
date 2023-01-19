@@ -28,7 +28,7 @@ struct Item: Codable {
     let itemPrivate: Bool?
     let owner: Owner?
     let htmlURL: String?
-    let description: String?
+    let descriptionText: String?
     let fork: Bool?
     let url: String?
     let forksURL: String?
@@ -56,7 +56,7 @@ struct Item: Codable {
     let svnURL: String?
     let homepage: String?
     let size, stargazersCount, watchersCount: Int?
-    let language: String??
+    let language: String?
     let hasIssues, hasProjects, hasDownloads, hasWiki: Bool?
     let hasPages, hasDiscussions: Bool?
     let forksCount: Int?
@@ -79,7 +79,8 @@ struct Item: Codable {
         case itemPrivate = "private"
         case owner
         case htmlURL = "html_url"
-        case description, fork, url
+        case descriptionText = "description"
+        case fork, url
         case forksURL = "forks_url"
         case keysURL = "keys_url"
         case collaboratorsURL = "collaborators_url"

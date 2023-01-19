@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     private var list: [Item]?
     private var showSkeleton = true
 
+    // You can change the base URL in NetworkPath to see the error view
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,6 +44,9 @@ class HomeViewController: UIViewController {
         setupLottie()
     }
 
+    // I usually use VIP Design pattern on my projects,
+    // and it is not good to make a call like this
+    // I tried to keep it simple, so I called webservices in here
     private func searchRepositories() {
         showSkeleton = true
         tableView.isHidden = false
